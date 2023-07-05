@@ -1,0 +1,417 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:focus,
+*:active {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent;
+
+}
+
+
+/*el titulo*/
+.titulo{
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    color: #979A9A;
+
+    
+}
+/*Aqui empieza el background*/
+#hero{
+    min-height: 100vh;
+    position: relative;
+}
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  
+}
+.capa{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:#1c1c1d ;
+    z-index: -1;
+    opacity: 0.5;
+    mix-blend-mode: overlay;
+}
+/*aqui empieza los textarea*/
+
+.txtCampo{
+    display: inline-block;    
+}
+.section2{
+    display: block;
+    position: absolute;
+    width: 350px;
+    height: 300px;
+    right: 18%;
+    top:  25%;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 1em;
+    background: transparent;
+    box-shadow: 0 0 50px #979A9A;
+    color: #ffffff;
+    
+
+}
+.contenedor-resultado {
+    width: 320px;
+    height: 270px;
+    overflow: auto;
+}
+
+textarea{
+    border: 2px solid transparent;
+    border-radius: 20px;
+    padding: 1em;
+    font-size: 16px;
+    resize: none;
+    outline: none;
+    font-family: 'Times New Roman', Times, serif;
+    
+    line-height: 1.2;
+    color: #ffffff;
+    background: transparent;
+    box-shadow: 0 0 50px #979A9A;
+    cursor: pointer;
+}
+
+#texto{
+    position: absolute;
+    top: 25%;
+    left: 18%;
+
+}
+/***************************Botones********************************/
+
+.a {
+    position: absolute;
+    display: inline-block;
+    padding: 12px 3px;
+    margin: 40px 0;
+    color: #03e9f4;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    background: transparent;
+    border-radius: 5px;
+}
+#btn-desencriptar{
+    position: absolute;
+    bottom: 10%;
+    left: 33%;
+
+}
+
+#btn-encriptar{
+    position: absolute;
+    bottom: 10%;
+    left: 18%;
+
+}
+#btn-copiar{
+    position: absolute;
+    bottom: 10%;
+    right: 25%;
+
+}
+
+.a:hover {
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+.a:nth-child(1) {
+    filter: hue-rotate(270deg);
+}
+
+.a:nth-child(2) {
+    filter: hue-rotate(110deg);
+}
+
+.a span {
+    position: absolute;
+    display: block;
+}
+
+.a span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+    0% {
+        left: -100%;
+    }
+    50%,
+    100% {
+        left: 100%;
+    }
+}
+
+.a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+
+@keyframes animate2 {
+    0% {
+        top: -100%;
+    }
+    50%,
+    100% {
+        top: 100%;
+    }
+}
+
+.a span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+
+@keyframes animate3 {
+    0% {
+        right: -100%;
+    }
+    50%,
+    100% {
+        right: 100%;
+    }
+}
+
+.a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+
+@keyframes animate4 {
+    0% {
+        bottom: -100%;
+    }
+    50%,
+    100% {
+        bottom: 100%;
+    }
+}
+
+
+
+/******************aqui empiza el footer******************/
+footer{
+    text-align: center;
+
+}
+/*se puede borrar*/
+.caja2{
+    
+    position: absolute;
+    bottom: 0;
+    left: 42%;
+}
+
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+}
+
+/*modifica el borde blanco*/
+.wrapper .icon {
+    position: relative;
+    background:transparent ;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.6, -055, 0265, 1.55);
+}
+
+/*modifica la ventana emergente*/
+.wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    color: #ffffff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/*modifica la punta de la ventana emergente*/
+.wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #ffffff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(068, -055, 0.265, 1.55);
+}
+
+/*modifica la vicivilidad de la ventana emergente*/
+.wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+/*le da el color al  boton */
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+    background: #1877F2;
+    color: #ffffff;
+}
+
+.wrapper .instagram:hover, 
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+    background: #E4405F;
+    color: #ffffff;
+}
+/*le da el color al  boton */
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+    background: #333333;
+    color: #ffffff;
+}
+
+.wrapper .linkedin:hover,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip::before {
+    background: #1DA1F2;
+    color: #ffffff;
+}
+
+
+a{
+    color: #ffffff;
+}
+
+/*Responsive*/
+
+@media (max-width: 57.5em) {
+
+    .titulo{
+        display: flex;
+        font-size: 13px;
+    }
+    .hero{
+        display: flex;
+        flex-direction: row;
+    }
+    .txtCampo{
+        width: 100%;
+    }
+    #texto{
+        width: 80%;
+        height: 35%;
+        left: 10%;
+        top: 10%;
+    }
+
+    #btn-desencriptar{
+        position: absolute;
+        font-size: 10px;
+        bottom: 40%;
+        left: 60%;
+    
+    }
+
+    
+    #btn-encriptar{
+        position: absolute;
+        font-size: 10px;
+        bottom: 40%;
+        left: 10%;
+    
+    }
+
+    .section2{
+        display: flex;
+        width: 80%;
+        height: 15%;
+        top: 55%;
+        left: 10%;
+
+    }
+    
+    #btn-copiar{
+        position: absolute;
+        font-size: 10px;
+        bottom: 17%;
+        right: 22%;
+        left: 22%;
+    
+    }
+
+    .caja2{
+    
+        position: absolute;
+        bottom: 6%;
+        left: 11%;
+    }
+
+    
+}
+
